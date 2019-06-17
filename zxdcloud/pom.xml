@@ -19,6 +19,7 @@
     <modules>
         <module>eureka-server</module>
         <module>service-second</module>
+        <module>spring-boot-rabbitmq</module>
     </modules>
 
     <properties>
