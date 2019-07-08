@@ -19,12 +19,11 @@ public class MqController {
     @RequestMapping("/send")
     public String send(){
         String content="Date:"+new Date();
-        amqpTemplate.convertAndSend("lyhTest1",content);
+        amqpTemplate.convertAndSend("zxdTest1",content);
         return content;
     }
     /**
-     * @Description:一对多发送消息
-     * @Date:16:06 2017/12/11
+     *
      * @return java.lang.String
      */
     @RequestMapping("/multiSend")
@@ -32,14 +31,12 @@ public class MqController {
         StringBuilder times=new StringBuilder();
         for(int i=0;i<10;i++){
             long time=System.nanoTime();
-            amqpTemplate.convertAndSend("lyhTest1","第"+i+"次发送的时间："+time);
+            amqpTemplate.convertAndSend("zxdTest1","第"+i+"次发送的时间："+time);
             times.append(time+"<br>");
         }
         return times.toString();
     }
     /**
-     * @Description:多对多发送消息
-     * @Date:16:39 2017/12/11
      * @return java.lang.String
      */
     @RequestMapping("/multi2MultiSend")
@@ -47,8 +44,8 @@ public class MqController {
         StringBuilder times=new StringBuilder();
         for(int i=0;i<10;i++){
             long time=System.nanoTime();
-            amqpTemplate.convertAndSend("lyhTest1","第"+i+"次发送的时间："+time);
-            amqpTemplate.convertAndSend("lyhTest2","第"+i+"次发送的时间："+time);
+            amqpTemplate.convertAndSend("zxdTest1","第"+i+"次发送的时间："+time);
+            amqpTemplate.convertAndSend("zxdTest2","第"+i+"次发送的时间："+time);
             times.append(time+"<br>");
         }
         return times.toString();
