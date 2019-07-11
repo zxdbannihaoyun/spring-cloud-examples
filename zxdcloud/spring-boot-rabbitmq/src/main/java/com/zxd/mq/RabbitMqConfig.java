@@ -7,7 +7,6 @@ import org.springframework.context.annotation.Configuration;
 /**
  * Created by zxd on 2019/6/17.
  */
-@Configuration
 public class RabbitMqConfig {
     @Bean
     public Queue Queue1() {

@@ -10,7 +10,6 @@ import org.springframework.context.annotation.Configuration;
 /**
  * Created by zxd on 2019/6/17.
  */
-@Configuration
 public class RabbitMqTopicConfig {
 
     //只接一个topic
