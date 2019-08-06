@@ -4,7 +4,10 @@ package com.zxd.test;
  * Created by zxd on 2019/6/5.
  */
 
+import org.assertj.core.util.Lists;
 import org.junit.Test;
+
+import java.util.List;
 
 public class TestSz {
 
@@ -80,6 +83,15 @@ public class TestSz {
                 count--;
             }
         }
+    }
+
+    @Test
+    public void test04(){
+
+        List<String> list = Lists.newArrayList();
+
+        list.add("123123");
+
     }
 
 

@@ -17,8 +17,8 @@ public class MyThreadPool {
 
     @Test
     public void test01() throws Exception {
-        ExecutorService executorService = Executors.newFixedThreadPool(10);
 
+        ExecutorService executorService = Executors.newFixedThreadPool(10);
 
         long start = System.currentTimeMillis();
         for (int i = 1; i <= 15; i++) {
